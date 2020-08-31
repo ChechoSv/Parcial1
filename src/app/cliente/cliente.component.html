@@ -1,0 +1,55 @@
+
+    <div class="form-group">
+        <label for="">Nombre</label>
+        <input type="text" class="form-control" [(ngModel)]="nombre">
+    </div>
+    <div class="form-group">
+        <label for="">Dui</label>
+        <input type="text" class="form-control" [(ngModel)]="dui">
+    </div>
+    <div class="form-group">
+        <label for="">Mascota</label>
+        <input type="text" class="form-control" [(ngModel)]="mascota">
+    </div>
+    <div class="form-group">
+        <label for="">Tratamiento</label>
+        <input type="text" class="form-control" [(ngModel)]="tratamiento">
+    </div>
+    <div class="form-group">
+        <label for="">Medicamento</label>
+        <input type="text" class="form-control" [(ngModel)]="medicamento">
+    </div>
+    <div class="form-group">
+        <label for="">Costo</label>
+        <input type="text" class="form-control" [(ngModel)]="costo">
+    </div>
+    <button class="btn btn-primary" (click)="ingresar()" >Ingresar</button>
+
+
+
+<table class="table" [hidden]="contador == 0">
+    <thead>
+    <tr>
+    <th>Nombre</th>
+    <th>Dui</th>
+    <th>Mascota</th>
+    <th>Tratamienro</th>
+    <th>Medicamento</th>
+    <th>Costo</th>
+    <th># Visita</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of registro">
+        <td>{{t.nombre}}</td>
+        <td>{{t.dui}}</td>
+        <td>{{t.mascota}}</td>
+        <td>{{t.tratamiento}}</td>
+        <td>{{t.medicamento}}</td>
+        <td>{{t.costo}}</td>
+        <td>{{t.nvisita}}</td>
+        </tr>
+        </tbody>
+        </table>
+
+
